@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Claws – Street Chicken Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Logo/Header */
+    header {
+      background: linear-gradient(135deg, #C01E2E, #F4B74B);
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: url('images/logo.png') no-repeat center/cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 20px #fff, 0 0 40px #C01E2E, 0 0 60px #F4B74B;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 20px #fff, 0 0 40px #C01E2E, 0 0 60px #F4B74B; }
+      100% { box-shadow: 0 0 30px #fff, 0 0 50px #C01E2E, 0 0 80px #F4B74B; }
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #C01E2E;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #fff;
+      text-shadow: 0 0 8px #F4B74B;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      margin: 0;
+    }
+    nav ul li a {
+      color: #F4B74B;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #C01E2E;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover::after { width: 100%; }
+
+    /* Hero Section */
+    .hero-img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 20px 0;
+      filter: brightness(0.85);
+      transition: transform 0.3s;
+    }
+    .hero-img:hover { transform: scale(1.05); }
+
+    /* Mission */
+    .mission {
+      max-width: 650px;
+      margin: 30px auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #fff;
+      text-shadow: 0 0 5px #C01E2E;
+    }
+
+    /* Menu Section */
+    #menu h2 {
+      color: #F4B74B;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #C01E2E;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin: 20px;
+    }
+    .card {
+      background: #222;
+      border: 2px solid #C01E2E;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(255,0,0,0.5);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .card img:hover { transform: scale(1.05); }
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.3rem;
+      color: #F4B74B;
+      text-shadow: 0 0 5px #C01E2E;
+    }
+    .card p.price {
+      color: #C01E2E;
+      font-weight: bold;
+      margin: 5px 0 15px;
+      font-size: 1.1rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      background-color: #C01E2E;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .card a:hover {
+      background-color: #F4B74B;
+      color: #222;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    /* Contact */
+    #contact h2 { color: #F4B74B; text-shadow: 0 0 5px #C01E2E; }
+    #contact p { font-size: 1.1rem; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"></div>
+    <h1>Crispy Claws (Orenge)</h1>
+    <p>Healthy Chicken, Happy Meals</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <img class="hero-img" src="images/hero.jpg" alt="Street Food Hero">
+    <div class="mission">
+      <p>Our mission is to serve customers flavorful, well‑prepared chicken heads & feet every time — crunchy, tasty, and street-food real.</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>🔥 Our Menu</h2>
+    <div class="menu-grid">
+      <div class="card">
+        <img src="images/chicken-head.jpg" alt="Fried Chicken Head">
+        <h3>Fried Chicken Head</h3>
+        <p class="price">KES 150</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="card">
+        <img src="images/chicken-feet.jpg" alt="Fried Chicken Feet">
+        <h3>Fried Chicken Feet</h3>
+        <p class="price">KES 120</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="card">
+        <img src="images/combo-meal.jpg" alt="Heads + Feet Combo">
+        <h3>Heads + Feet Combo</h3>
+        <p class="price">KES 250</p>
+        <a href="#">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Want to Order?</h2>
+    <p>Call or WhatsApp: <strong>+254 7XX XXX XXX</strong></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Crispy Claws | Made with 🔥 in Kenya
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav ul li a').forEach(a => {
+      a.onclick = (e) => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+  </script>
+
+</body>
+</html>
